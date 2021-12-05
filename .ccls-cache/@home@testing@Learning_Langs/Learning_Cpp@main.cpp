@@ -32,12 +32,15 @@ void allaocate_heap_mem() {
   printf("allaocate_heap_mem \n");
   int ptr = 10;
   malloc(ptr);
-  printf("Allocated ptr at %i", &ptr);
 }
 
 void printsusingstd(){
     printf("printsusingstd \n");
     std::cout << "Hello Wrld";
+}
+
+void MergeSort(){
+
 }
 
 int main(){

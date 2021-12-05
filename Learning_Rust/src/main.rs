@@ -16,7 +16,6 @@ Heap Memory function(allaocateHeapMemory)
 |   1   |  y  | 20
 */
 
-
 fn allaocate_stack_memory() {
     let _z = 10;
     let _y = 20;
@@ -33,7 +32,7 @@ fn mem() {
 
 #[allow(non_snake_case)]
 #[allow(dead_code)]
-fn Learninf_Rust_BU_Examples(){
+fn Learning_Rust_By_Example() {
     // this alos works
     println!("{} num is stringified", 31);
     // Also needs a positional argument
@@ -47,15 +46,18 @@ fn Learninf_Rust_BU_Examples(){
     println!("{number:>width$}", number = 1, width = 3);
     // Padding by 0
     println!("{number:0>width$}", number = 1, width = 3);
-    struct UnPrintable (i32);
     #[derive(Debug)]
-    struct Printable(i32);
-    struct Structure {
-        hari : i32
+    struct Person<'a> {
+        name: &'a str,
+        age: u8,
     }
+    let name = "Peter";
+    let age = 13;
+    let peter = Person { name, age };
+    println!("{:#?}", peter);
 }
 
 fn main() {
     mem();
-    Learninf_Rust_BU_Examples();
+    Learning_Rust_By_Example();
 }
