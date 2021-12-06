@@ -1,3 +1,5 @@
+use std::fmt;
+
 /*
 - Stack Memory in rust
 - Memory is allaocated and removed quickly
@@ -32,7 +34,7 @@ fn mem() {
 
 #[allow(non_snake_case)]
 #[allow(dead_code)]
-fn Learning_Rust_By_Example() {
+fn learning_rust_by_example() {
     // this alos works
     println!("{} num is stringified", 31);
     // Also needs a positional argument
@@ -47,8 +49,9 @@ fn Learning_Rust_By_Example() {
     // Padding by 0
     println!("{number:0>width$}", number = 1, width = 3);
     #[derive(Debug)]
-    struct Person<'a> {
-        name: &'a str,
+    struct Person<'str> {
+    // 
+        name: &'str str,
         age: u8,
     }
     let name = "Peter";
@@ -59,5 +62,5 @@ fn Learning_Rust_By_Example() {
 
 fn main() {
     mem();
-    Learning_Rust_By_Example();
+    learning_rust_by_example();
 }
