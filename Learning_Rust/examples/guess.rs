@@ -1,7 +1,15 @@
-use rand::Rng;
+fn convert_str_into_num(){
+    let mut me = "me";
+    let me : i32 = match me.trim().parse() {
+        Ok(num) => num,
+        Err(_) => 0,
+    };
+    loop {
+        
+    }
+}
+
 
 fn main() {
-   println!("Guess the number");
-   let secret_number = rand::thread_rng().gen_range(  1 .. 2); 
-   println!("{}",secret_number);
+    convert_str_into_num();
 }
