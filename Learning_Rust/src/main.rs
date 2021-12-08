@@ -4,8 +4,7 @@ use std::io;
 
 fn main() {
     println!("Guess the number!");
-    let secret_number = rand::thread_rng().gen_range(1..10);
-
+    let secret_number: u32 = rand::thread_rng().gen_range(1..100000);
 
     loop {
         println!("Please input your guess.");
@@ -15,7 +14,7 @@ fn main() {
         io::stdin()
             .read_line(&mut guess)
             .expect("Failed to read line");
-        
+
         // Converting guess into a num
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
