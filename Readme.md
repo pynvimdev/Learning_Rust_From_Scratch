@@ -1,3 +1,4 @@
-# Learning Memory using rust and cpp
+# Learning rust
 
-### I am very bad at this
+### why?
+- In case wsl(kali-linux) just ... stop working.
