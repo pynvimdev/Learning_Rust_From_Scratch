@@ -16,18 +16,21 @@ fn main() {
             .read_line(&mut guess)
             .expect("Hllo World");
 
-        let guess : u32 = guess.trim().parse()
+        let guess : u32 = guess
+            .trim()
+            .parse()
             .expect("Type a num");
 
         println!("You guessed: {}", guess);
 
-        match guess.cmp(&secret_number) {
-            Ordering::Less => println!("Too small"),
-            Ordering::Greater => println!("Too big!"),
-            Ordering::Equal => {
-                println!("You win!");
-                break;
-            }
+        match guess
+            .cmp(&secret_number) {
+                Ordering::Less => println!("Too small"),
+                Ordering::Greater => println!("Too big!"),
+                Ordering::Equal => {
+                    println!("You win!");
+                    break;
+                }
         }
     }
 }

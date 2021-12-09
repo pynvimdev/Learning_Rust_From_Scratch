@@ -1,8 +1,17 @@
-struct Person<'a>{
-    name : &'a str,
-    age : u8
+fn main(){
+    sum(1 , 2);
+    hello();
+    sec_sum(2);
 }
 
-fn main(){
+pub fn hello() -> String {
+    ("Hello World").to_string()
+}
 
+fn sum(a : i8 , b : i8){
+    println!("Sum is {}" ,a + b);
+}
+
+fn sec_sum(a: i32){
+   a + 1; 
 }
