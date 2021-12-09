@@ -1,3 +1,5 @@
+extern crate rand;
+
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io;
@@ -14,12 +16,8 @@ fn main() {
             .read_line(&mut guess)
             .expect("Hllo World");
 
-        // Converting guess into a num
-        let guess: u32 = if let Ok(num) = guess.trim().parse() {
-            num
-        } else {
-            continue
-        };
+        let guess : u32 = guess.trim().parse()
+            .expect("Type a num");
 
         println!("You guessed: {}", guess);
 
