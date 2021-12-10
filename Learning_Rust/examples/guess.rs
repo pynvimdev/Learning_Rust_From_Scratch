@@ -1,5 +1,5 @@
 use std::io;
-
+#[allow(unused_must_use)]
 fn main() {
     let (s1, s2) = ("some", "string");
     let s = [s1, s2].concat();
@@ -8,9 +8,10 @@ fn main() {
     let mut age = String::new();
 
     println!("Enter your age");
-    io::stdin().read_line(&mut age);
+    io::stdin()
+        .read_line(&mut age);
 
-    let mut age: i32 = match age.trim().parse() {
+    let age: i32 = match age.trim().parse() {
         Ok(age) => age,
         Err(_) => -1,
     };
