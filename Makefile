@@ -10,9 +10,8 @@ all:
 	rm main
 
 rust:
-	rustc ~/coding/Learning_Langs/Learning_Rust/src/main.rs
-	clear
-	./main
+	cd ~/coding/Learning_Langs/Learning_Rust \
+		cargo run && cargo clean
 
 cpp:
 	g++ ~/coding/Learning_Langs/Learning_Cpp/src/main.cpp
