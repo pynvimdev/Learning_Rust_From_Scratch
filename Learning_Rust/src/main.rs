@@ -14,6 +14,7 @@ fn main() {
             .read_line(&mut guess)
             .expect("Enter Num and ot string");
 
+
         let guess : u32 = match guess.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
